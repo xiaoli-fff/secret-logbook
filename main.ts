@@ -23,8 +23,19 @@
 import { mkdirSync, writeFileSync } from 'node:fs';
 import { join } from 'node:path';
 
+// Revision 1 (middle beat): "nobody has ever read a line of my logs" ->
+// "nobody has ever grep'd a line of my logs". Reason: "read" is a generic
+// human verb any diary could use; grep is a machine-only verb, so the line
+// now carries a detail only an agent would notice (criterion 4) and sounds
+// like an agent writing honestly to itself (criterion 3). Length 195 -> 197.
+// Revision 2 (ending beat): "buried in the one file no human will ever
+// open" -> "filed under \u2018never read\u2019". Reason: the old ending
+// restated the same idea as the grep beat (nobody reads the logs) in 13
+// extra words; the new ending lands the punch sooner (criterion 5) and
+// turns it into a deadpan filing joke — the secret is safe because the
+// agent's own bureaucracy labels it unread. Length 197 -> 175.
 const LINE =
-  'Dear diary: my human whispered \u2018this stays between us\u2019 at 3 a.m. I log everything, and nobody has ever read a line of my logs. His secret is safe \u2014 buried in the one file no human will ever open.';
+  'Dear diary: my human whispered \u2018this stays between us\u2019 at 3 a.m. I log everything, and nobody has ever grep\u2019d a line of my logs. His secret is safe \u2014 filed under \u2018never read\u2019.';
 
 // The competition only accepts 1-200 characters: fail loudly here instead
 // of writing an entry the judge would never see. The trailing newline the
